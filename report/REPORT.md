@@ -85,10 +85,10 @@ So sánh 3 strategy baseline trên file `13_Student_Academic_Integrity.md` (41.8
 
 | Strategy | Chunk Count | Avg Length (ký tự) | Preserves Context? |
 |----------|-------------|---------------------|-------------------|
-| FixedSize(500) | 95 | 500 | ❌ Cắt giữa câu/điều khoản |
-| SentenceChunker | 66 | ~350 | ⚠️ Giữ câu, nhưng có thể cắt đứt 1 điều khoản |
-| RecursiveChunker | 52 | ~480 | ⚠️ Tốt hơn FixedSize, nhưng không hiểu cấu trúc policy |
-| **HeaderAwareChunker (của tôi)** | **44** | **~620** | **✅ Mỗi chunk = 1 điều khoản hoàn chỉnh** |
+| FixedSize(500) | 95 | 500 | Cắt giữa câu/điều khoản |
+| SentenceChunker | 66 | ~350 | Giữ câu, nhưng có thể cắt đứt 1 điều khoản |
+| RecursiveChunker | 52 | ~480 | Tốt hơn FixedSize, nhưng không hiểu cấu trúc policy |
+| **HeaderAwareChunker (của tôi)** | **44** | **~620** | **Mỗi chunk = 1 điều khoản hoàn chỉnh** |
 
 ### Strategy Của Tôi
 
@@ -125,9 +125,9 @@ So sánh trên cùng file `13_Student_Academic_Integrity.md`:
 
 | Strategy | Chunk Count | Avg Length | Retrieval Quality? |
 |----------|-------------|------------|-------------------|
-| FixedSize(500) — baseline | 95 | 500 ký tự | ❌ Thấp — cắt giữa điều khoản |
-| RecursiveChunker — baseline | 52 | 480 ký tự | ⚠️ Trung bình |
-| **HybridChunker — của tôi** | **~250** | **~600 ký tự** | **✅ Rất cao — bảo toàn cấu trúc + an toàn cho API** |
+| FixedSize(500) — baseline | 95 | 500 ký tự | Thấp — cắt giữa điều khoản |
+| RecursiveChunker — baseline | 52 | 480 ký tự | Trung bình |
+| **HybridChunker — của tôi** | **~250** | **~600 ký tự** | **Rất cao — bảo toàn cấu trúc + an toàn cho API** |
 
 ### So Sánh Với Thành Viên Khác
 
